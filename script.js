@@ -25,6 +25,7 @@ var Typer={
 		accessCountimer=setInterval(function(){Typer.updLstChr();},500); // inizialize timer for blinking cursor
 		$.get(Typer.file,function(data){// get the text file
 			Typer.text=data;// save the textfile in Typer.text
+            Typer.text=Typer.text.toUpperCase();
 		});
 	},
 	
